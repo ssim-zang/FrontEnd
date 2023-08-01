@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>mypage</title>
+    <meta name="description" content="PortFolio for World-renowned Software enginner DaeHyun">
+    <meta name="author" content="DaeHyun">
+    <link rel="shortcut icon" href="images/profile.jpg" type="image/x-icon">
+    <!-- Goggle Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/86c243af6d.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="mypage.css">
+    <!-- Java Script -->
+    <script src="src/main.js" defer></script>
+</head>
+<body>
+    <section class="Profile">
+        <div class="Pfofile__logo">
+            <img class="Profile__logo__img" src="defaultimg3.png" alt="personal_img">
+            <div class="Profile__filechoice">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="button">
+                        <label for="chooseFile">
+                            👉 이미지 선택 👈
+                        </label>
+                    </div>
+                    <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)">
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Home -->
+    <section id="Profile__home">
+        <!-- section이라는 클래스명을 왜 붙혔나면, 섹션이라는 클래스를 가진 아이들의 
+        스타일링이 결국 비슷비슷하기 때문에(가령 패딩이나, 마진 같은것들, 위치, 정렬 이런것들의 공통적인 스타일링을 위해 묶어놓음)
+        섹션이라는 클래스명으로 묶어놓음. -->
+        <!-- 이름 -->
+        <div class="Profile__Container">
+            <div id="Profile__Name" class="Profile__box"><input class="ProfileEdit" type="text" placeholder="이름"></div>
+            <!-- 학번 -->
+            <div id="Profile__STDID" class="Profile__box"><input class="ProfileEdit" type="text" placeholder="학번"></div>
+            <!-- 씨애랑 기수 -->
+            <div id="Profile__ClubGeneration" class="Profile__box"><input class="ProfileEdit" type="text" placeholder="씨애랑 기수"></div>
+            <!-- 깃허브 주소 -->
+            <div id="Profile__Gitaddr" class="Profile__box"><input class="ProfileEdit" type="text" placeholder="깃허브 주소"></div>
+        </div> 
+    </section>
+</body>
+</html>

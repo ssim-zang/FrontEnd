@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginstyle.css">
+    <script src="login.js" defer></script>
+    <title>Login</title>
+</head>
+<body>
+    <!-- 전체 박스 -->
+    <div class="wrapper">
+        <!-- 실질적인 내용 -->
+        <div class="container">
+            <!-- sign up 컨테이너(회원가입) -->
+          <div class="sign-up-container">
+            <form>
+              <h1>Create Account</h1>
+              <span>or use your Student ID for registration</span>
+              <input type="text" placeholder="Name">
+              <!-- <input type="text" placeholder="Student ID"> -->
+              <input type="ID" placeholder="ID">
+              <input type="password" placeholder="Password">
+              <input type="password" placeholder="Password Check">
+              <!-- 재 확인용 -->
+
+              <button class="form_btn">Sign Up</button>
+            </form>
+          </div>
+
+          <!-- sign in 컨테이너(로그인) -->
+          <div class="sign-in-container">
+            <form>
+              <h1>Sign In</h1>
+              <span>or use your account</span>
+              <input type="ID" placeholder="ID">
+              <input type="password" placeholder="Password">
+              <button class="form_btn">Sign In</button>
+            </form>
+          </div>
+
+          <div class="overlay-container">
+            <div class="overlay-left">
+              <!-- sign in(로그인)을 위한 오버레이  -->
+              <h1>Welcome Back</h1>
+              <p>To keep connected with us please login with your personal info</p>
+              <button id="signIn" class="overlay_btn">Sign In</button>
+            </div>
+
+            <div class="overlay-right">
+              <!-- sign up(회원가입) 을 위한 오버레이 -->
+              <h1>Hello, Friend</h1>
+              <p>Enter your personal details and start community with us</p>
+              <button id="signUp" class="overlay_btn">Sign Up</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+</body>
+</html>

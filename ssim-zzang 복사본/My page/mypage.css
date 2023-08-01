@@ -1,0 +1,162 @@
+/* Global */
+:root{
+    /* App Colors */
+
+    /* 색깔보다 한 단계 더 추상적으로 사용하는 색깔들인거암. 웹의 전반적인 색깔을 담당하는
+    primary, 강조할때 사용하는 accent, 그리고 텍스트의 색깔인 text까지 이렇게 내가 CSS내에서
+    사용하는 색깔조차도 나중에 변수로 만들어서 사용가능하다는것이다. */
+    --color-primary: var(--color-black);
+    --color-primary-variant: var(--color-gray);
+    /* 주로 사용하는 프라이머리 색상에 대한 변형을 하나 더 정의.(프라이머리 하나만 사용하면 밋밋하니까~) */
+    --color-accent: var(--color-blue);
+    --color-accent-variant: var(--color-orange);
+    /* 얘도 같은 의미에서 베리언트를 설정해줌. 액센트 색깔 하나만 사용하면 밋밋하니까 ㅇㅇ */
+    --color-text: var(--color-white);
+    
+    /* Colors */
+    --color-white: #ffffff;
+    --color-black: #050a13;
+    --color-blue: #03e8f9;
+    --color-orange: #fd6413;
+    --color-gray: #1b1e26;
+
+    /* Size */
+    --size-max-width: 1200px;
+}
+
+*{
+    box-sizing: border-box;
+    /* 조금 더 직관적으로 너비와 높이를 명시할 수 있도록(패딩과 보더까지 합해서 위드와 하이트가 지정될 수 있도록 하기 위함) */
+}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+}
+
+h1, h2, h3, p, ul{
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+button{
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+}
+
+button:focus{
+    outline: 1px solid var(--color-accent);
+}
+/* Common(재사용 목적 css, 흐름이 비슷한 것들한테는 공통적인 스타일링을 해줌.) */
+
+.max-container{
+    max-width: var(--size-max-width);
+    margin: auto;
+}
+
+/* Profile */
+.Profile{
+    background-color: var(--color-primary);
+    /* position: fixed; */
+    /* top: 0; */
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    /* flex에서 기준축(지금은 수평)에 대한 정렬 속성값은 정렬하는 방식에 따라 상이함. */
+    align-items: center;
+    /* flex에서 기준축의 반대축(지금에서 반대축은 수직)에 대한 정렬 속성값은 정렬하는 방식에 따라 상이함. */
+}
+
+.Profile__logo{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* flex 박스 안에들어있는 자식들간의 여백(gap)을 관리*/
+}
+
+.Profile__logo__img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    /* 이미지의 원래 비율이 유지됨. 위드와 하이트에 상관없이 유지됨 */
+    border: 3px solid var(--color-accent-variant);
+    border-radius: 100%;
+    margin-left: 48rem;
+}
+
+.Profile__filechoice{
+    margin-left: 48rem;
+}
+
+/* 이미지 선택을 위한 라벨, 폼 */
+.button {
+    display: flex;
+    justify-content: center;
+}
+label {
+    cursor: pointer;
+    font-size: 1em;
+    color: var(--color-white);
+}
+
+/* 못생긴 기존 input 숨기기 */
+#chooseFile {
+    visibility: hidden;
+}
+/* 여기까지가 이미지 선택 */
+
+/* Home */
+#Profile__home{
+    background-color: var(--color-primary-variant);
+    color: var(--color-text);
+    text-align: center;
+    width: 100%;
+    height: 100rem;
+    margin: auto;
+    /* margin-top: 10rem; */
+}
+
+.Profile__Container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 20rem; */
+    /* margin: auto; */
+    /* background-color: #ffffff */
+}
+
+.Profile__box{
+    /* width: 100%; */
+    /* height: 25rem; */
+    /* margin-top: 50rem; */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-gray);
+}
+
+#Profile__Name{
+    margin-top: 5rem;
+}
+
+.ProfileEdit{
+    margin: auto;
+    width: 60rem;
+    height: 5rem;
+    border-radius: 30px;
+    border: 2px solid #fd6413;
+    font-size: large;
+    font-weight: bolder;
+}
