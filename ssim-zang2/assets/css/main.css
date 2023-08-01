@@ -3431,6 +3431,10 @@ input, select, textarea {
 						outline: 0;
 					}
 
+					#header nav ul li span {
+						color: green;
+					}
+
 						#header nav ul li a.button, #header nav ul li span.button {
 							height: 2em;
 							line-height: 2em;
