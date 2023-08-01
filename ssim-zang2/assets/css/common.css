@@ -39,7 +39,6 @@ header,footer,ul, li {
 
 
 /* Section/Article */
-
 header.special {
     text-align: center;
 }
@@ -144,7 +143,9 @@ footer.major {
                 }
 
                 #header nav ul li span {
-                    color: #27d01e;
+                    /* color: #27d01e; */
+                    color: #27a021;
+                    /* font-size: 17px; */
                 }
 
                     #header nav ul li a.button, #header nav ul li span.button {
