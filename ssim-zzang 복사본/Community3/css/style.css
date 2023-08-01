@@ -11,6 +11,8 @@
     --color-accent-variant: var(--color-orange);
     /* 얘도 같은 의미에서 베리언트를 설정해줌. 액센트 색깔 하나만 사용하면 밋밋하니까 ㅇㅇ */
     --color-text: var(--color-white);
+    --color-main: var(--color-navymain);
+    --color-sub: var(--color-navysub);
     
     /* Colors */
     --color-white: #f8f8f8d2;
@@ -18,8 +20,12 @@
     --color-blue: #03e8f9;
     --color-orange: #fd6413;
     --color-gray: #1b1e26;
-    --color-green: #6c8c69;
+    --color-green: #a7d7a3;
     /* --color-green:#27d01ea8; */
+    --color-navymain: #1b3c74dc;
+    --color-navysub: #1a174d;
+    --color-test1: #172b4d;
+    --color-test2:  #1a174d;
   }
 
 * {
@@ -27,16 +33,18 @@
     padding: 0;
 }
 
-/* body{
+body{
     margin: 0;
-} */
+    overflow-x: hidden;
+}
 
 html {
-    font-size: 15px;
+    font-size: 11px;
 }
 
 ul, li {
     list-style: none;
+    margin: 0;
 }
 
 a {
@@ -45,7 +53,7 @@ a {
 }
 
 .board_wrap {
-    width: 85rem;
+    width: 80rem;
     margin: 10rem auto;
     margin-left: 23rem;
 }
@@ -370,7 +378,7 @@ a {
 
 /* 사이드 메뉴 */
 input[type="search"] {
-    width: 17rem;
+    width: 13rem;
     height: 3rem;
     margin: 0 auto;
     margin-left: 9px;
@@ -384,10 +392,10 @@ input[type="search"] {
 .left_sub_menu {
     position: fixed;
     /* top: 50px; */
-    width: 19rem;
+    width: 20rem;
     /* z-index: 10; */
     /* left: 45px; */
-    background: var(--color-green);
+    background: var(--color-test2);
     border-right: 1px solid rgba(0, 0, 0, 0.07);
     bottom: 0px;
     height: 100%;
@@ -399,20 +407,21 @@ input[type="search"] {
 }
 
 .sub_menu {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .left_sub_menu>.sub_menu li:hover {
     color: ff5858;
-    background-color: var(--color-gray);
+    background-color: #ffffff4c;
 }
 
 .left_sub_menu>.sub_menu li {
-    color: rgb(255, 255, 255);
-    font-size: 25px;
+    color: var(--color-green);
+    font-size: 17px;
     font-weight: 600;
-    padding: 20px 0px 8px 14px;
-    border-bottom: 1px solid #e1e1e1;
+    margin: 0px 20px 7px 20px;
+    margin-bottom: 7px;
+    border-bottom: 2px solid var(--color-white);
 }
 /* Menu1, Menu2 선택자 */
 
@@ -420,37 +429,43 @@ input[type="search"] {
     color: var(--color-text);
 }
 
-
-
 .sub_menu>h2 {
-    padding-bottom: 30px;
-    border-bottom: 3px solid #797979;
-    margin-top: 50px;
-    font-size: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 40px;
+    border: 3px solid var(--color-white);
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 20px;
     font-weight: 600;
     /* color: rgb(251, 203, 112); */
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-bottom: 20px;
     font-family: 'NotoKrB';
     line-height: 35px;
 }
-.sub_menu>h2>a{
-    color: rgb(246, 224, 224);
-}
 /* input 아레에 있는 Community 관련 */
+
+.sub_menu>h2>a{
+    color: var(--color-white);
+}
+/* input 아레에 있는 Community 글씨만 관련 */
 
 
 .sub_menu>.big_menu>.small_menu li {
     color: #333;
-    font-size: 19px;
+    font-size: 13px;
     font-weight: 600;
     border-bottom: 0px solid #e1e1e1;
-    margin-left: 14px;
+    /* margin-left: 14px; */
     padding-top: 8px;
+
 }
 
 .big_menu {
     cursor: pointer;
+    padding-bottom: 10px;
 }
 
 ul {
@@ -476,4 +491,9 @@ ul {
 .has_sub {
     width: 100%;
 } */
+
+.searchbox{
+    position: relative;
+    left: 60rem;
+}
 
