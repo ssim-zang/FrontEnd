@@ -142,6 +142,10 @@ footer.major {
                     outline: 0;
                 }
 
+                #header nav ul li a {
+                    color: lightgrey;
+                }
+
                 #header nav ul li span {
                     /* color: #27d01e; */
                     color: #27a021;
